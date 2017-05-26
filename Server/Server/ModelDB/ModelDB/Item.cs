@@ -1,4 +1,4 @@
-namespace ModelDB
+namespace ModelDB.ModelDB
 {
     using System;
     using System.Collections.Generic;
@@ -15,7 +15,6 @@ namespace ModelDB
             Displacements = new HashSet<Displacement>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [Required]

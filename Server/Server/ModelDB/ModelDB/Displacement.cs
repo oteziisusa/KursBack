@@ -1,4 +1,4 @@
-namespace ModelDB
+namespace ModelDB.ModelDB
 {
     using System;
     using System.Collections.Generic;
@@ -9,7 +9,6 @@ namespace ModelDB
     [Table("Displacement")]
     public partial class Displacement
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         public int RoomNumber { get; set; }

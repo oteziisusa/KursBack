@@ -1,4 +1,4 @@
-namespace ModelDB
+namespace ModelDB.ModelDB
 {
     using System;
     using System.Collections.Generic;

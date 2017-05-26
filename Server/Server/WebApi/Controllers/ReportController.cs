@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 using WebApi.IDatabase;
-using Newtonsoft.Json;
 using WebApi.Models;
-using ModelDB;
+using ModelDB.ModelDB;
 
 namespace WebApi.Controllers
 {

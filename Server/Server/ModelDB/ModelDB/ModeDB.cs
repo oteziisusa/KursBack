@@ -1,14 +1,14 @@
-namespace ModelDB
+namespace ModelDB.ModelDB
 {
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class ModelDB : DbContext
+    public partial class ModeDB : DbContext
     {
-        public ModelDB()
-            : base("name=ModelDB")
+        public ModeDB()
+            : base("name=ModeDB")
         {
         }
 
@@ -28,11 +28,6 @@ namespace ModelDB
                 .WithOptional(e => e.ParentCategory)
                 .HasForeignKey(e => e.ParentId);
 
-            modelBuilder.Entity<Category>()
-                .HasMany(e => e.Items)
-                .WithRequired(e => e.Category)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<Item>()
                 .Property(e => e.Name)
                 .IsFixedLength();
@@ -41,11 +36,6 @@ namespace ModelDB
                 .Property(e => e.RegistrationNumber)
                 .IsFixedLength();
 
-            modelBuilder.Entity<Item>()
-                .HasMany(e => e.Displacements)
-                .WithRequired(e => e.Item)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<Room>()
                 .Property(e => e.Owner)
                 .IsFixedLength();
@@ -53,11 +43,6 @@ namespace ModelDB
             modelBuilder.Entity<Room>()
                 .Property(e => e.Name)
                 .IsFixedLength();
-
-            modelBuilder.Entity<Room>()
-                .HasMany(e => e.Displacements)
-                .WithRequired(e => e.Room)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Room>()
                 .HasMany(e => e.Items)

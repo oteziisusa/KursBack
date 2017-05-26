@@ -1,4 +1,4 @@
-namespace ModelDB
+namespace ModelDB.ModelDB
 {
     using System;
     using System.Collections.Generic;
@@ -16,7 +16,6 @@ namespace ModelDB
             Items = new HashSet<Item>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [Required]
